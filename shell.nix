@@ -9,6 +9,7 @@ pkgs.mkShell {
     gcc
     ffmpeg_4
     pkg-config
+    zlib
   ];
 
   shellHook = ''
@@ -18,6 +19,7 @@ pkgs.mkShell {
         [
           ffmpeg_4
           stdenv.cc.cc.lib
+          zlib
         ]
       )
     }:$LD_LIBRARY_PATH"
